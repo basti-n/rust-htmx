@@ -1,7 +1,9 @@
 version: '3'
 services:
   client:
-    image: sebastianneumair/htmx-rust
+    image: sebastianneumair/htmx-rust:${TAG:-main}
+    environment:
+      - TAG=main
     build:
       context: .
       dockerfile: Dockerfile
